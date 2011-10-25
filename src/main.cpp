@@ -16,17 +16,19 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     app->setProperty("NoMStyle", true);
     QDeclarativeView *view = new QDeclarativeView();
+    QString gotoUri = "http://html5demos.com/canvas-grad";
 
     QStringList result;
     result = app->arguments().filter("--uri=");
     if ((result.isEmpty() == false) && (result.count()==1)) { //interested in only one hit, sry
         if (result.at(0).startsWith("--uri=")) {
-            QString gotoUri = result.at(0).mid(6);
-            QDeclarativeContext *context = view->rootContext();
-            context->setContextProperty("gotoUri", gotoUri);
+            gotoUri.clear();
+            gotoUri = result.at(0).mid(6);
             qDebug(gotoUri.toLatin1());
         }
     }
+    QDeclarativeContext *context = view->rootContext();
+    context->setContextProperty("gotoUri", gotoUri);
 
     view->setSource(QUrl("qrc:/qml/main.qml"));
 
