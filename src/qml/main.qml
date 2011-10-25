@@ -16,10 +16,15 @@ PageStackWindow {
             visible: true
 
             ToolIcon {
+                id: addButton
+                iconSource: "qrc:/data/icon-m-add-application.svg"
+            }
+            ToolIcon {
                 id: menuButton
                 iconId: "toolbar-view-menu"
                 onClicked: (mapsMenu.status == DialogStatus.Closed) ? mapsMenu.open() : mapsMenu.close()
             }
+
         }
 
         Menu {
