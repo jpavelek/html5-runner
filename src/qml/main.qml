@@ -4,7 +4,6 @@ import QtWebKit 1.0
 
 PageStackWindow {
     id: appWindow
-    property string gotoUri : 'http://html5demos.com/canvas-grad'
 
     initialPage: mainPage
 
