@@ -48,6 +48,7 @@ PageStackWindow {
         id: addWebApp
         acceptButtonText: "Save"
         rejectButtonText: "Cancel"
+        rotation: appWindow.rotation
         content: Flickable {
             anchors.fill: parent; anchors.leftMargin: 20; anchors.rightMargin:20; anchors.topMargin:50
             flickableDirection: Flickable.VerticalFlick
