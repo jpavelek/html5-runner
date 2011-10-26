@@ -18,6 +18,9 @@ PageStackWindow {
             ToolIcon {
                 id: addButton
                 iconSource: "qrc:/data/icon-m-add-application.svg"
+                onClicked: {
+                    console.log("Make new app with URL " + webView.url)
+                }
             }
             ToolIcon {
                 id: menuButton
@@ -37,7 +40,7 @@ PageStackWindow {
         WebView {
             id: webView
             anchors.fill: parent
-            url: gotoUri
+            url: gotoUri  //value/property passed from main.cpp
         }
     }
 
