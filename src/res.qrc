@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>qml/main.qml</file>
         <file>data/icon-m-add-application.svg</file>
+        <file>data/icons-Applications-html5.svg</file>
     </qresource>
 </RCC>

@@ -6,9 +6,11 @@ OTHER_FILES += \
     src/data/meegohandsetmaps.desktop \
     src/data/icon-m-current-position.svg \
     src/data/icon-m-zoom-in.svg \
-    src/data/icon-m-zoom-out.svg
+    src/data/icon-m-zoom-out.svg \
+    src/qml/AddWebApp.qml
 
 RESOURCES += \
     src/res.qrc
+
 
 
